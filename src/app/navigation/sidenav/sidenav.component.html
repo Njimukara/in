@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode ="side">
+    <mat-toolbar>Options</mat-toolbar>
+    <mat-card>
+      <mat-nav-list>
+        <a mat-list-item > Primiere option </a>
+        <a mat-list-item > Deuxieme option </a>
+        <a mat-list-item > Troisieme option </a>
+        <a mat-list-item > Quatrieme option </a>
+      </mat-nav-list>
+    </mat-card>
+  </mat-sidenav>
+    <div>
+      <app-toolbar (toggleSidenav) = "sidenav.toggle()"></app-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>
