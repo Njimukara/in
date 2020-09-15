@@ -1,0 +1,65 @@
+h2 {
+    text-align: center;
+    padding: 2% 0;
+    text-transform: uppercase;
+    font-size: 250%;
+}
+h4 {
+    text-align: center;
+    padding-top: 2%;
+}
+.font_size {
+    font-size: 200%;
+    font-weight: 400;
+}
+.search-div {
+    padding-bottom: 10px;
+    margin: auto;
+}
+.search-form-field {
+    width: 60%;
+    /* padding: 2px 10px; */
+    margin-left: 20%;
+    background-color: #adadad3a;
+    border-radius: 5px;
+}
+.central_button {
+    margin-top: 2%;
+    margin-left: 45%;
+}
+.search-form-field div.mat-form-field-infix {
+    border-top: 0px;
+}
+.search-form-field div.mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+.search-form-field div.mat-form-field-suffix {
+    height: 10%;
+    /* width: 10%; */
+}
+mat-card {
+    margin: 2% 1%;
+    min-height: 200px;
+    text-align: center;
+    text-transform: uppercase;
+}
+mat-card p {
+    padding-top: 10%;
+    font-size: 150%;
+}
+div a:hover {
+    text-decoration: none;
+}
+
+.sa {
+    background-color: rgb(25, 202, 66);
+}
+.sc {
+    background-color: rgb(190, 28, 28);
+}
+.sp {
+    background-color: rgb(229, 208, 17);
+}
+.scm {
+    background-color: rgb(126, 21, 97);
+}

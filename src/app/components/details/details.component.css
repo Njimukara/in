@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+    padding: 2% 0;
+    text-transform: uppercase;
+}
+h4 {
+    text-align: center;
+    padding-top: 2%;
+}
+.font_size {
+    font-size: 200%;
+    font-weight: 400;
+}
