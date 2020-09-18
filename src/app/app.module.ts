@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,8 @@ import { RoutingModule } from './routing/routing.module';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { DetailsComponent } from './components/details/details.component';
+// import { CommandService, OfficeService, ServiceService } from './services/index.services';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { DetailsComponent } from './components/details/details.component';
     DetailsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppmaterialModule,
     RouterModule,
@@ -32,7 +36,11 @@ import { DetailsComponent } from './components/details/details.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    // CommandService,
+    // OfficeService,
+    // ServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
