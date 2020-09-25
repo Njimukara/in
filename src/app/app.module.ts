@@ -14,8 +14,8 @@ import { RoutingModule } from './routing/routing.module';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { DetailsComponent } from './components/details/details.component';
+import { WorkformComponent } from './components/workform/workform.component';
 // import { CommandService, OfficeService, ServiceService } from './services/index.services';
-
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { DetailsComponent } from './components/details/details.component';
     ResultsComponent,
     ToolbarComponent,
     SidenavComponent,
-    DetailsComponent
+    DetailsComponent,
+    WorkformComponent
   ],
   imports: [
     HttpClientModule,
