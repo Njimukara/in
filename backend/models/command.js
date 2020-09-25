@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Service, { foreignKey: 'serviceId', foreignKeyConstraint: true, onDelete: 'CASCADE', onUpdate: 'CASCADE'});
-      this.belongsTo(models.Office, { foreignKey: 'office_Id', as: 'offices', foreignKeyConstraint: true, onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+      this.belongsTo(models.Service, { foreignKey: 'service_Id', targetKey: 'serviceId', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+      this.belongsTo(models.Office, { foreignKey: 'office_Id', targetKey: 'officeId', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
     }
   };
   Command.init({
@@ -25,7 +25,20 @@ module.exports = (sequelize, DataTypes) => {
     },
     commandName: DataTypes.STRING,
     dateCreated: DataTypes.DATE,
-    office_Id: DataTypes.INTEGER
+    office_Id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Offices',
+        key: 'officeId'
+      }
+    },
+    service_Id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Services',
+        key: 'serviceId'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Command',

@@ -10,6 +10,19 @@ module.exports = {
       officeName: {
         type: Sequelize.STRING
       },
+      officePassword: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+      },
+      service_Id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        refrences: {
+          model: 'Services',
+          key: 'serviceId'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

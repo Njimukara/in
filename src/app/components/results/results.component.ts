@@ -10,7 +10,6 @@ import { OfficeStructure } from '../../models/structure.office';
 import { Command } from '../../models/command';
 import { Service } from '../../models/service';
 import { Office } from '../../models/office';
-import { getRenderedText } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-results',
@@ -34,8 +33,12 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     this.fetchCommands();
     this.fetchServices();
+    this.fetchOffices();
   }
 
+
+
+  
   fetchCommands() {
     this.commandService
       .getCommands()
@@ -44,7 +47,7 @@ export class ResultsComponent implements OnInit {
         this.commandCount = data.commandCount
         console.log(this.commands);
       });
-  }
+  };
   fetchServices() {
     this.serviceService
       .getServices()
@@ -53,7 +56,7 @@ export class ResultsComponent implements OnInit {
         this.serviceCount = data.serviceCount
         console.log(this.services);
       });
-  }
+  };
   fetchOffices() {
     this.officeService
       .getOffices()
@@ -63,4 +66,4 @@ export class ResultsComponent implements OnInit {
         console.log(this.offices);
       });
   }
-}
+};

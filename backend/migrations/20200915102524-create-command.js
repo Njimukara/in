@@ -17,10 +17,15 @@ module.exports = {
       office_Id: {
         type: Sequelize.INTEGER,
         refrences: {
-          model: {
-            tableName: "Offices"
-          },
+          model: 'Offices',
           key: "officeId"
+        }
+      },
+      service_Id: {
+        type: Sequelize.INTEGER,
+        refrences: {
+          model: 'Services',
+          key: "serviceId"
         }
       },
       createdAt: {

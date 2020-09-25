@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.Office, { foreignKey: 'service_Id', foreignKeyConstraint: true, onDelete: 'CASCADE', onUpdate: 'CASCADE' } )
-      this.hasMany(models.Command, { foreignKey: 'serviceId', foreignKeyConstraint: true, onDelete: 'CASCADE', onUpdate: 'CASCADE' } )
+      this.hasMany(models.Office, { foreignKey: 'service_Id' } )
+      this.hasMany(models.Command, { foreignKey: 'service_Id' } )
     }
   };
   Service.init({

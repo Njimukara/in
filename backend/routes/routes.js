@@ -1,6 +1,23 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 const models = require('../models');
+// const {check, validationResult} = require('express-validator');
+
+// Office Sign In
+router.route('/user/login').post(async (req, res, next) => {
+    let office = await models.Office.findOne({
+        where: {
+            officeId: req.body.officeId,
+            officePassword: req.body.officePassword
+        }
+    });
+
+    if (!office) return res.status(400).send('Office Does Not Exist');
+    res.json(office)
+
+});
 
 router.route('/commands').get((req, res, next) => {
     models.Command.findAndCountAll()
@@ -84,7 +101,9 @@ router.route('/command/add').post((req, res, next) => {
     const command = {
         commandId: req.body.commandId,
         commandName: req.body.commandName,
-        dateCreated: req.body.dateCreated
+        dateCreated: req.body.dateCreated,
+        office_Id: req.body.office_Id,
+        service_Id: req.body.service_Id
     };
     models.Command.create(command)
         .then(data => {
@@ -111,6 +130,8 @@ router.route('/office/add').post((req, res, next) => {
     const office = {
         officeId: req.body.officeId,
         officeName: req.body.officeName,
+        officePassword: req.body.officePassword,
+        service_Id: req.body.service_Id
     };
     models.Office.create(office)
         .then(data => {
