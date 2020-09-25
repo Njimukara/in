@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppmaterialModule } from './appmaterial/appmaterial.module';
 import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
-import { LoginComponent } from './components/registration/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { ResultsComponent } from './components/results/results.component';
 import { RoutingModule } from './routing/routing.module';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
