@@ -1,3 +1,23 @@
-<p>
-  login works!
-</p>
+
+  <h2>CONNEXION</h2>
+  <div class= "s firstrow">
+
+    <a class="service administrative" [routerLink] = "'/login'"><div>Service Administrative</div></a>
+    <a class="service maintanance" [routerLink] = "'/login'"><div> Service De La Maintanance</div></a>
+    <a class="service commercial" [routerLink] = "'/login'"><div>Service Commercial</div></a>
+  </div>
+  <div class = "s secondrow">
+    <a class="service comptabilite" [routerLink] = "'/login'"><div>Service De Comptabilite</div></a>
+    <a class="service production" [routerLink] = "'/login'"><div>Service PRODUCTION</div></a>
+  </div>
+  <form class= "formclass">
+    <mat-form-field appearance="outline">
+      <input  type="text" matInput placeholder="ID du Bureau" floatLabel="never" autocomplete="off">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <input  type="password" matInput placeholder="Mot de passe">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" > S'identifier </button>
+  </form>
