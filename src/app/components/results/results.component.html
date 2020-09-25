@@ -1,4 +1,4 @@
-<h2 class="display-4">Bienvenue au "service Administrative"</h2>
+<h2 class="display-4">Bienvenue au</h2>
 <form class="container">
   <div class="search-div">
     <mat-form-field class="search-form-field" appearance="fill">
@@ -12,19 +12,29 @@
     <button class="central_button" mat-raised-button color="primary">Rechercher</button>
   </div>
 </form>
+
+
+
+
+
+
+
+
 <!-- [(ngModel)]="searchKey
 *ngIf="searchKey" (click)="onSearchClear()" -->
-<section class="container">
+<!-- <section class="container">
   <h4 class="font_size display-4">Le Dossier de Travail se trouve au Service Administrative</h4>
   <div class="row">
-    <div class="col-md-6">
+    <div *ngFor="let service of services" class="col-md-3">
       <a [routerLink] = "'/details'">
         <mat-card class="sa">
-          <p>Service Administrative</p>
+          <p>{{service?.serviceName}}</p>
         </mat-card>
       </a>
     </div>
-    <div class="col-md-6" >
+  </div> -->
+
+    <!-- <div class="col-md-6" >
       <a [routerLink] = "'/details'">
         <mat-card class="sc">
           <p>Service Comptabilite</p>
@@ -47,5 +57,5 @@
         </mat-card>
       </a>
     </div>
-  </div>
+  </div> -->
 </section>

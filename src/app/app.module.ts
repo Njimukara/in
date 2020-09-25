@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +15,7 @@ import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { DetailsComponent } from './components/details/details.component';
 import { WorkformComponent } from './components/workform/workform.component';
+// import { CommandService, OfficeService, ServiceService } from './services/index.services';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { WorkformComponent } from './components/workform/workform.component';
     WorkformComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppmaterialModule,
     RouterModule,
@@ -34,7 +37,11 @@ import { WorkformComponent } from './components/workform/workform.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    // CommandService,
+    // OfficeService,
+    // ServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
